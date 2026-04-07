@@ -5,8 +5,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Observability
   - Logging
+  - Observability
 url: >-
   https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -19,8 +19,8 @@ apis:
       Loki is an open source log aggregation system from Grafana Labs designed to store and query logs efficiently using labels instead of full-text indexing.
     humanURL: https://grafana.com/oss/loki/
     tags:
-      - Observability
       - Logging
+      - Observability
     properties:
       - type: Documentation
         url: https://grafana.com/docs/loki/latest/
