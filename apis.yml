@@ -34,6 +34,8 @@ apis:
         url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
       - type: GitHub Repository
         url: https://github.com/grafana/loki
+      - type: OpenAPI
+        url: openapi/loki-openapi.yml
 common:
   - type: Website
     url: https://grafana.com/oss/loki/
