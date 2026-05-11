@@ -43,6 +43,10 @@ common:
     url: https://grafana.com/docs/loki/latest/
   - type: GitHub Organization
     url: https://github.com/grafana
+  - type: Integrations
+    url: https://grafana.com/integrations/
+integrations:
+  - name: All visualization integrations
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
