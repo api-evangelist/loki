@@ -1,0 +1,388 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loki HTTP API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Push log entries to Loki",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:3100/loki/api/v1/push"
+      },
+      "docs": "Push log entries to Loki"
+    },
+    {
+      "info": {
+        "name": "Push OTLP log entries",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:3100/otlp/v1/logs"
+      },
+      "docs": "Push OTLP log entries"
+    },
+    {
+      "info": {
+        "name": "Run a LogQL instant query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/query",
+        "params": [
+          {
+            "name": "query",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "time",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Run a LogQL instant query"
+    },
+    {
+      "info": {
+        "name": "Run a LogQL range query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/query_range",
+        "params": [
+          {
+            "name": "query",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "start",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "end",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Run a LogQL range query"
+    },
+    {
+      "info": {
+        "name": "List label names",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/labels"
+      },
+      "docs": "List label names"
+    },
+    {
+      "info": {
+        "name": "List values for a label",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/label/:name/values",
+        "params": [
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List values for a label"
+    },
+    {
+      "info": {
+        "name": "List series matching matchers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/series"
+      },
+      "docs": "List series matching matchers"
+    },
+    {
+      "info": {
+        "name": "List series matching matchers via POST",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:3100/loki/api/v1/series"
+      },
+      "docs": "List series matching matchers via POST"
+    },
+    {
+      "info": {
+        "name": "Retrieve index stats",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/index/stats"
+      },
+      "docs": "Retrieve index stats"
+    },
+    {
+      "info": {
+        "name": "Retrieve index volume",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/index/volume"
+      },
+      "docs": "Retrieve index volume"
+    },
+    {
+      "info": {
+        "name": "Retrieve index volume over a range",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/index/volume_range"
+      },
+      "docs": "Retrieve index volume over a range"
+    },
+    {
+      "info": {
+        "name": "Retrieve detected log patterns",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/patterns"
+      },
+      "docs": "Retrieve detected log patterns"
+    },
+    {
+      "info": {
+        "name": "Tail log entries via WebSocket",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/tail"
+      },
+      "docs": "Tail log entries via WebSocket"
+    },
+    {
+      "info": {
+        "name": "Readiness probe",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/ready"
+      },
+      "docs": "Readiness probe"
+    },
+    {
+      "info": {
+        "name": "Prometheus metrics endpoint",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/metrics"
+      },
+      "docs": "Prometheus metrics endpoint"
+    },
+    {
+      "info": {
+        "name": "Retrieve the running configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/config"
+      },
+      "docs": "Retrieve the running configuration"
+    },
+    {
+      "info": {
+        "name": "Retrieve build information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/status/buildinfo"
+      },
+      "docs": "Retrieve build information"
+    },
+    {
+      "info": {
+        "name": "List all ruler namespaces and groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/rules"
+      },
+      "docs": "List all ruler namespaces and groups"
+    },
+    {
+      "info": {
+        "name": "List rule groups in a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/rules/:namespace",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List rule groups in a namespace"
+    },
+    {
+      "info": {
+        "name": "Create or update rule groups in a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:3100/loki/api/v1/rules/:namespace",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create or update rule groups in a namespace"
+    },
+    {
+      "info": {
+        "name": "Delete all rule groups in a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:3100/loki/api/v1/rules/:namespace",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete all rule groups in a namespace"
+    },
+    {
+      "info": {
+        "name": "Retrieve a rule group",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/rules/:namespace/:groupName",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "groupName",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve a rule group"
+    },
+    {
+      "info": {
+        "name": "Delete a rule group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:3100/loki/api/v1/rules/:namespace/:groupName",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "groupName",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a rule group"
+    },
+    {
+      "info": {
+        "name": "List delete requests",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/delete"
+      },
+      "docs": "List delete requests"
+    },
+    {
+      "info": {
+        "name": "Create a delete request",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:3100/loki/api/v1/delete"
+      },
+      "docs": "Create a delete request"
+    },
+    {
+      "info": {
+        "name": "Cancel a delete request",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:3100/loki/api/v1/delete"
+      },
+      "docs": "Cancel a delete request"
+    },
+    {
+      "info": {
+        "name": "Format a LogQL query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:3100/loki/api/v1/format_query"
+      },
+      "docs": "Format a LogQL query"
+    }
+  ],
+  "bundled": true
+}
