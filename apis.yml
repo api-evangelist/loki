@@ -4,7 +4,7 @@ description: >-
   Loki is an open source log aggregation system from Grafana Labs designed to store and query logs efficiently using
   labels instead of full-text indexing.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Logging
   - Observability
