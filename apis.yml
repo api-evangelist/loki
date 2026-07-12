@@ -34,6 +34,10 @@ apis:
       - type: OpenAPI
         url: openapi/loki-openapi.yml
 common:
+  - type: TrustCenter
+    url: security/loki-trust-center.yml
+  - type: DomainSecurity
+    url: security/loki-domain-security.yml
   - type: Website
     url: https://grafana.com/oss/loki/
   - type: Documentation
@@ -42,6 +46,8 @@ common:
     url: https://github.com/grafana
   - type: Integrations
     url: https://grafana.com/integrations/
+  - url: https://grafana.com/blog/index.xml
+    type: Blog
 integrations:
   - name: All visualization integrations
 maintainers:
