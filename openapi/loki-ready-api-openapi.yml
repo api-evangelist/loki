@@ -1,0 +1,24 @@
+openapi: 3.1.0
+info:
+  title: Loki HTTP Config Ready API
+  description: Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.
+  version: 1.0.0
+servers:
+- url: http://localhost:3100
+  description: Default Loki HTTP server
+tags:
+- name: Ready
+paths:
+  /ready:
+    get:
+      operationId: ready
+      summary: Readiness probe
+      responses:
+        '200':
+          description: Ready
+        default:
+          description: Error response
+      tags:
+      - Ready
+x-generated-from: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+x-generated-by: claude-crawl-2026-05-08

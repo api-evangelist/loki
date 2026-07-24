@@ -1,16 +1,13 @@
 openapi: 3.1.0
 info:
-  title: Loki HTTP API
-  description: >-
-    Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API,
-    covering log ingest, queries, labels, series, status, ring, flush,
-    rules, and deletion endpoints.
+  title: HTTP Config Loki API
+  description: Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.
   version: 1.0.0
-x-generated-from: https://grafana.com/docs/loki/latest/reference/loki-http-api/
-x-generated-by: claude-crawl-2026-05-08
 servers:
-  - url: http://localhost:3100
-    description: Default Loki HTTP server
+- url: http://localhost:3100
+  description: Default Loki HTTP server
+tags:
+- name: Loki
 paths:
   /loki/api/v1/push:
     post:
@@ -21,55 +18,52 @@ paths:
           description: Logs accepted
         default:
           description: Error response
-  /otlp/v1/logs:
-    post:
-      operationId: pushOtlpLogs
-      summary: Push OTLP log entries
-      responses:
-        '204':
-          description: Logs accepted
-        default:
-          description: Error response
+      tags:
+      - Loki
   /loki/api/v1/query:
     get:
       operationId: query
       summary: Run a LogQL instant query
       parameters:
-        - name: query
-          in: query
-          schema:
-            type: string
-        - name: time
-          in: query
-          schema:
-            type: string
+      - name: query
+        in: query
+        schema:
+          type: string
+      - name: time
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Query result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/query_range:
     get:
       operationId: queryRange
       summary: Run a LogQL range query
       parameters:
-        - name: query
-          in: query
-          schema:
-            type: string
-        - name: start
-          in: query
-          schema:
-            type: string
-        - name: end
-          in: query
-          schema:
-            type: string
+      - name: query
+        in: query
+        schema:
+          type: string
+      - name: start
+        in: query
+        schema:
+          type: string
+      - name: end
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Query result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/labels:
     get:
       operationId: listLabels
@@ -79,21 +73,25 @@ paths:
           description: List of label names
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/label/{name}/values:
     get:
       operationId: getLabelValues
       summary: List values for a label
       parameters:
-        - name: name
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Label values
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/series:
     get:
       operationId: listSeries
@@ -103,6 +101,8 @@ paths:
           description: Series result
         default:
           description: Error response
+      tags:
+      - Loki
     post:
       operationId: postSeries
       summary: List series matching matchers via POST
@@ -111,6 +111,8 @@ paths:
           description: Series result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/index/stats:
     get:
       operationId: indexStats
@@ -120,6 +122,8 @@ paths:
           description: Index statistics
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/index/volume:
     get:
       operationId: indexVolume
@@ -129,6 +133,8 @@ paths:
           description: Volume result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/index/volume_range:
     get:
       operationId: indexVolumeRange
@@ -138,6 +144,8 @@ paths:
           description: Volume range result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/patterns:
     get:
       operationId: getPatterns
@@ -147,6 +155,8 @@ paths:
           description: Patterns result
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/tail:
     get:
       operationId: tailLogs
@@ -156,33 +166,8 @@ paths:
           description: Tail stream
         default:
           description: Error response
-  /ready:
-    get:
-      operationId: ready
-      summary: Readiness probe
-      responses:
-        '200':
-          description: Ready
-        default:
-          description: Error response
-  /metrics:
-    get:
-      operationId: metrics
-      summary: Prometheus metrics endpoint
-      responses:
-        '200':
-          description: Metrics text exposition
-        default:
-          description: Error response
-  /config:
-    get:
-      operationId: getConfig
-      summary: Retrieve the running configuration
-      responses:
-        '200':
-          description: Configuration
-        default:
-          description: Error response
+      tags:
+      - Loki
   /loki/api/v1/status/buildinfo:
     get:
       operationId: buildInfo
@@ -192,6 +177,8 @@ paths:
           description: Build info
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/rules:
     get:
       operationId: listAllRules
@@ -201,88 +188,100 @@ paths:
           description: Rules list
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/rules/{namespace}:
     get:
       operationId: listNamespaceRules
       summary: List rule groups in a namespace
       parameters:
-        - name: namespace
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: namespace
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Rule groups
         default:
           description: Error response
+      tags:
+      - Loki
     post:
       operationId: createNamespaceRules
       summary: Create or update rule groups in a namespace
       parameters:
-        - name: namespace
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: namespace
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '202':
           description: Accepted
         default:
           description: Error response
+      tags:
+      - Loki
     delete:
       operationId: deleteNamespaceRules
       summary: Delete all rule groups in a namespace
       parameters:
-        - name: namespace
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: namespace
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '204':
           description: Deleted
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/rules/{namespace}/{groupName}:
     get:
       operationId: getRuleGroup
       summary: Retrieve a rule group
       parameters:
-        - name: namespace
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: groupName
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: namespace
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: groupName
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Rule group
         default:
           description: Error response
+      tags:
+      - Loki
     delete:
       operationId: deleteRuleGroup
       summary: Delete a rule group
       parameters:
-        - name: namespace
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: groupName
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: namespace
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: groupName
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '204':
           description: Deleted
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/delete:
     get:
       operationId: listDeleteRequests
@@ -292,6 +291,8 @@ paths:
           description: Delete requests
         default:
           description: Error response
+      tags:
+      - Loki
     post:
       operationId: createDeleteRequest
       summary: Create a delete request
@@ -300,6 +301,8 @@ paths:
           description: Accepted
         default:
           description: Error response
+      tags:
+      - Loki
     delete:
       operationId: cancelDeleteRequest
       summary: Cancel a delete request
@@ -308,6 +311,8 @@ paths:
           description: Cancelled
         default:
           description: Error response
+      tags:
+      - Loki
   /loki/api/v1/format_query:
     get:
       operationId: formatQuery
@@ -317,4 +322,7 @@ paths:
           description: Formatted query
         default:
           description: Error response
-components: {}
+      tags:
+      - Loki
+x-generated-from: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+x-generated-by: claude-crawl-2026-05-08
