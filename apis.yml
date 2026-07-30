@@ -4,7 +4,19 @@ description: >-
   Loki is an open source log aggregation system from Grafana Labs designed to store and query logs efficiently using
   labels instead of full-text indexing.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/loki.png
 tags:
   - Logging
   - Observability
@@ -15,24 +27,71 @@ created: '2026-03-25'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: loki:loki-http-api
-    name: Loki HTTP API
-    description: >-
-      The Loki HTTP API supports pushing logs, querying with LogQL, range queries, label discovery, series retrieval,
-      index stats and volume, pattern detection, log tailing, deletion, and ruler operations. There is no published
-      OpenAPI specification; see Grafana's HTTP API reference for endpoint details.
-    humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
-    tags:
-      - Logging
-      - Observability
-      - HTTP API
-    properties:
-      - type: Documentation
-        url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
-      - type: GitHubRepository
-        url: https://github.com/grafana/loki
-      - type: OpenAPI
-        url: openapi/loki-openapi.yml
+- aid: loki:loki-config-api
+  name: Loki Config API
+  description: The Config API from Loki — 1 operation(s) for config.
+  humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  tags:
+  - Config
+  properties:
+  - type: OpenAPI
+    url: openapi/loki-config-api-openapi.yml
+  - type: Documentation
+    url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  - type: GitHubRepository
+    url: https://github.com/grafana/loki
+- aid: loki:loki-loki-api
+  name: Loki Loki API
+  description: The Loki API from Loki — 17 operation(s) for loki.
+  humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  tags:
+  - Loki
+  properties:
+  - type: OpenAPI
+    url: openapi/loki-loki-api-openapi.yml
+  - type: Documentation
+    url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  - type: GitHubRepository
+    url: https://github.com/grafana/loki
+- aid: loki:loki-metrics-api
+  name: Loki Metrics API
+  description: The Metrics API from Loki — 1 operation(s) for metrics.
+  humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/loki-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  - type: GitHubRepository
+    url: https://github.com/grafana/loki
+- aid: loki:loki-otlp-api
+  name: Loki Otlp API
+  description: The Otlp API from Loki — 1 operation(s) for otlp.
+  humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  tags:
+  - Otlp
+  properties:
+  - type: OpenAPI
+    url: openapi/loki-otlp-api-openapi.yml
+  - type: Documentation
+    url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  - type: GitHubRepository
+    url: https://github.com/grafana/loki
+- aid: loki:loki-ready-api
+  name: Loki Ready API
+  description: The Ready API from Loki — 1 operation(s) for ready.
+  humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  tags:
+  - Ready
+  properties:
+  - type: OpenAPI
+    url: openapi/loki-ready-api-openapi.yml
+  - type: Documentation
+    url: https://grafana.com/docs/loki/latest/reference/loki-http-api/
+  - type: GitHubRepository
+    url: https://github.com/grafana/loki
 common:
   - type: AgenticAccess
     url: agentic-access/loki-agentic-access.yml
