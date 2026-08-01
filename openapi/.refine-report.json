@@ -1,0 +1,22 @@
+{
+  "provider": "loki",
+  "sources": [
+    "loki-config-api-openapi.yml",
+    "loki-loki-api-openapi.yml",
+    "loki-metrics-api-openapi.yml",
+    "loki-otlp-api-openapi.yml",
+    "loki-ready-api-openapi.yml"
+  ],
+  "outputs": [
+    "loki-config-api-openapi.yml",
+    "loki-loki-api-openapi.yml",
+    "loki-metrics-api-openapi.yml",
+    "loki-otlp-api-openapi.yml",
+    "loki-ready-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
