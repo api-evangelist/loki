@@ -93,6 +93,17 @@ apis:
   - type: GitHubRepository
     url: https://github.com/grafana/loki
 common:
+  - type: IssueTracker
+    url: https://github.com/grafana/loki/issues
+  - type: Releases
+    url: https://github.com/grafana/loki/releases
+  - type: CodeOfConduct
+    url: https://github.com/grafana/loki/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/grafana/loki/blob/main/CONTRIBUTING.md
+  - type: License
+    name: AGPL-3.0
+    url: https://github.com/grafana/loki/blob/main/LICENSE
   - type: AgenticAccess
     url: agentic-access/loki-agentic-access.yml
   - type: TrustCenter
