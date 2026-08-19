@@ -1,0 +1,2467 @@
+{
+  "item": [
+    {
+      "id": "368ccf7d-28c7-457e-986b-efbba8a641c0",
+      "name": "Loki",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8797f891-a72b-4216-996f-c82409199ab6",
+          "name": "Push log entries to Loki",
+          "request": {
+            "name": "Push log entries to Loki",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "push"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c4fc0298-6a74-4986-85a3-bfe4c3d3389d",
+              "name": "Logs accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "push"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "31ddebba-af99-48f2-9872-38ca305c6d27",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "push"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6b393e6-7b65-4266-8357-2bbf1b8074d9",
+          "name": "Run a LogQL instant query",
+          "request": {
+            "name": "Run a LogQL instant query",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "180952b4-ee9f-42f9-83c3-5345d3b0108c",
+              "name": "Query result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2c5da711-9b40-4e6f-8fd4-b4437786635d",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44491c9f-208a-4be2-ba22-30364b8083eb",
+          "name": "Run a LogQL range query",
+          "request": {
+            "name": "Run a LogQL range query",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "query_range"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7065e7e9-9182-48cd-afb7-e4d1abcc918a",
+              "name": "Query result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "query_range"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9b6052e7-4006-44f5-9ad5-0328558273d6",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "query_range"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "83ab5580-a4f8-4be2-820c-692b615a8f7f",
+          "name": "List label names",
+          "request": {
+            "name": "List label names",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "labels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1030f239-283c-421e-982f-08e09e239294",
+              "name": "List of label names",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "labels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f42ac0cd-91c8-476e-b5e5-5aee9bef9707",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "labels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c88cf1f-796a-41c4-9c46-dd685ff2585d",
+          "name": "List values for a label",
+          "request": {
+            "name": "List values for a label",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "label",
+                ":name",
+                "values"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a8f4c5e6-2355-426d-9e82-4e09b44aeb46",
+              "name": "Label values",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "label",
+                    ":name",
+                    "values"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d33ab064-4b68-4c25-bb21-b2da43cb0622",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "label",
+                    ":name",
+                    "values"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5eaad27e-5b98-4c5c-8673-b8f7875e2bd5",
+          "name": "List series matching matchers",
+          "request": {
+            "name": "List series matching matchers",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1a4b3257-9ae4-40b3-902a-ec33e011153b",
+              "name": "Series result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "61fe1f76-729c-46a0-9c0d-f20bdde7bf9f",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7463e3b8-8b0c-4d61-bb27-27ce060b04a4",
+          "name": "List series matching matchers via POST",
+          "request": {
+            "name": "List series matching matchers via POST",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94aaca7f-da68-4c86-89cd-856175f0ba96",
+              "name": "Series result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2b166c8a-626c-4e3a-8d81-ed5aeabc6721",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7959b4a3-2452-4162-9fba-1f3e9462503f",
+          "name": "Retrieve index stats",
+          "request": {
+            "name": "Retrieve index stats",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "index",
+                "stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c9b8423c-8bd2-45bd-b23b-ae732b0be519",
+              "name": "Index statistics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f6691cfd-c798-442d-b797-bec7a6115d1e",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d6cdea6-bd0d-4dc5-9fb7-e92a584c3488",
+          "name": "Retrieve index volume",
+          "request": {
+            "name": "Retrieve index volume",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "index",
+                "volume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f31f24ea-77f5-45c1-935f-364517acae49",
+              "name": "Volume result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "volume"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "930c1605-98dc-484a-aa9a-524a2c158d95",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "volume"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cf26d224-bab7-4f77-ba75-b699863a33ca",
+          "name": "Retrieve index volume over a range",
+          "request": {
+            "name": "Retrieve index volume over a range",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "index",
+                "volume_range"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "01bde743-0e05-43db-86da-f6a89bd0e75c",
+              "name": "Volume range result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "volume_range"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0bb80fd4-927e-4766-a5a3-f7ec78c59b89",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "index",
+                    "volume_range"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4587f1cc-2cb9-44dc-a4ad-b79e9a4c8e2b",
+          "name": "Retrieve detected log patterns",
+          "request": {
+            "name": "Retrieve detected log patterns",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "patterns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c69558c-73c2-4173-a2d1-51e21f72ba55",
+              "name": "Patterns result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "patterns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "43b77d5d-0912-4933-8bcf-76f8f5c6db4c",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "patterns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d1d3f34-0d2f-4ea2-bbd6-ba0a54546792",
+          "name": "Tail log entries via WebSocket",
+          "request": {
+            "name": "Tail log entries via WebSocket",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "tail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "618598c4-886d-41b1-9f07-8923abc8c51e",
+              "name": "Tail stream",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "tail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "49d7dcf1-7bb8-4bb5-a913-7477fc50594a",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "tail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57f8a8e6-b0d0-4993-861b-c2c7a412dbb7",
+          "name": "Retrieve build information",
+          "request": {
+            "name": "Retrieve build information",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "status",
+                "buildinfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a8adae8-bffb-4bfa-96ab-bb0ac2b79376",
+              "name": "Build info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "status",
+                    "buildinfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e74521d2-7ee1-4c95-b77b-e9e21e00fd05",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "status",
+                    "buildinfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7260d52e-de7f-4843-8e89-1d1f9621de48",
+          "name": "List all ruler namespaces and groups",
+          "request": {
+            "name": "List all ruler namespaces and groups",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1a80e59b-9e99-4f0d-b97c-13f31559d5a6",
+              "name": "Rules list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e104be06-99da-416f-82ab-be44b165e43f",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "009f26cd-6ea3-4afa-b2ca-9062b58e580e",
+          "name": "List rule groups in a namespace",
+          "request": {
+            "name": "List rule groups in a namespace",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules",
+                ":namespace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37b2617a-6973-433c-ade4-8f19a330a2ec",
+              "name": "Rule groups",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dd713e92-395a-401b-a8f9-67ca2a5f69c5",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3532033a-d198-4fae-84d6-18230db31ff7",
+          "name": "Create or update rule groups in a namespace",
+          "request": {
+            "name": "Create or update rule groups in a namespace",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules",
+                ":namespace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4b7c6b43-8eaf-48a4-8e26-36b7fcef0c32",
+              "name": "Accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dfc0a5af-910a-4f3d-816c-503ce0c51f1f",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "23c14128-f51d-42c8-83fc-d125ead49d52",
+          "name": "Delete all rule groups in a namespace",
+          "request": {
+            "name": "Delete all rule groups in a namespace",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules",
+                ":namespace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4f2a9abb-27b7-47e6-85d9-12a1a9d6d26b",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "52c61cbc-bf91-4d41-b780-942e076c0bc4",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f5278c4-cd56-4f35-a0aa-bf0e12377f65",
+          "name": "Retrieve a rule group",
+          "request": {
+            "name": "Retrieve a rule group",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules",
+                ":namespace",
+                ":groupName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "24ea55b7-fef1-48f0-b1e9-298e86677aca",
+              "name": "Rule group",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace",
+                    ":groupName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aed7d2eb-7842-4e84-8df8-81398eacad1b",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace",
+                    ":groupName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1ff387ca-ae88-4461-ad65-390cfed1ceae",
+          "name": "Delete a rule group",
+          "request": {
+            "name": "Delete a rule group",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "rules",
+                ":namespace",
+                ":groupName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "678da5c6-7d20-42c2-8fdb-a111f4c6bd23",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace",
+                    ":groupName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "240fe611-dbc2-4157-8ae4-74929a05c3c4",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "rules",
+                    ":namespace",
+                    ":groupName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "874e03d6-d1e0-42c0-a44a-348bb59a1e46",
+          "name": "List delete requests",
+          "request": {
+            "name": "List delete requests",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef1dccaa-90b8-4b3f-a735-a2c82a36744a",
+              "name": "Delete requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a7c8fa7b-ee50-4230-befa-1c0b51bad861",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e0ac34e6-1662-4bac-b765-7cb19c2aacc0",
+          "name": "Create a delete request",
+          "request": {
+            "name": "Create a delete request",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "31f0dbba-3f41-4e92-81e1-23ceb7055f23",
+              "name": "Accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6a5fd1a8-a096-4e33-af30-d31171e4a45a",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d9a92e97-fcde-4f62-ae47-e0c0919b97a7",
+          "name": "Cancel a delete request",
+          "request": {
+            "name": "Cancel a delete request",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "186bbf27-6a92-412a-a309-70e426624016",
+              "name": "Cancelled",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "493bdd08-5b99-458d-8eb2-6a1dc01883c8",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a378f40b-71df-4945-ada7-2a6bc5e5fa35",
+          "name": "Format a LogQL query",
+          "request": {
+            "name": "Format a LogQL query",
+            "description": {},
+            "url": {
+              "path": [
+                "loki",
+                "api",
+                "v1",
+                "format_query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0a38f3e5-2ef0-465d-ac5a-6853de662bd4",
+              "name": "Formatted query",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "format_query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "33fdc77f-a597-4dc7-811e-fdb3201c4982",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loki",
+                    "api",
+                    "v1",
+                    "format_query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:3100",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "650fdb87-a14b-469e-bdb7-d6f65a8629e4",
+    "name": "HTTP Config Loki API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

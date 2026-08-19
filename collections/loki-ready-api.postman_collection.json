@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "1cce77d8-6f41-4861-89d0-5929d85a307d",
+      "name": "Ready",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d3fd92e-96b0-4b02-b209-be77a1771210",
+          "name": "Readiness probe",
+          "request": {
+            "name": "Readiness probe",
+            "description": {},
+            "url": {
+              "path": [
+                "ready"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95413288-ac6d-4ee9-9e03-1bd175dd9c0b",
+              "name": "Ready",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ready"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "71ed2af0-aae4-498d-a761-a6897a3e87a9",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ready"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:3100",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "50216f0f-1d01-4d0f-952c-28a1b92915e5",
+    "name": "Loki HTTP Config Ready API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

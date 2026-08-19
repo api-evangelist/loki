@@ -1,0 +1,122 @@
+{
+  "item": [
+    {
+      "id": "6b7c30b9-3b35-40ef-862c-daee57a9cb3e",
+      "name": "Otlp",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b569581d-4b6e-4fb1-acea-dddf9e1bcdb2",
+          "name": "Push OTLP log entries",
+          "request": {
+            "name": "Push OTLP log entries",
+            "description": {},
+            "url": {
+              "path": [
+                "otlp",
+                "v1",
+                "logs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0cfa21d8-07f4-4b77-9b74-ee7b4b9d6150",
+              "name": "Logs accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "otlp",
+                    "v1",
+                    "logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "df29346f-e3e8-4a02-88a5-1b1566e46926",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "otlp",
+                    "v1",
+                    "logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:3100",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "06eca4b4-7be9-45dd-8d0c-e765ff9f7f4f",
+    "name": "Loki HTTP Config Otlp API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

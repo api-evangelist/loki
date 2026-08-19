@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "2ce0944b-7b53-43fc-aecc-d77b1efb1001",
+      "name": "Metrics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ed8aad12-100d-486e-b0dc-9657e75efe35",
+          "name": "Prometheus metrics endpoint",
+          "request": {
+            "name": "Prometheus metrics endpoint",
+            "description": {},
+            "url": {
+              "path": [
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "918cfe8d-0984-4c86-b483-ce60c7d8ca6a",
+              "name": "Metrics text exposition",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e107c88f-61f6-4864-9718-8c4f8d0d6a87",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:3100",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "687699b1-9586-43bc-927d-8eec92d03809",
+    "name": "Loki HTTP Config Metrics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 specification for the Grafana Loki HTTP API, covering log ingest, queries, labels, series, status, ring, flush, rules, and deletion endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loki HTTP Config Otlp API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Otlp",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Push OTLP log entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:3100/otlp/v1/logs"
+          },
+          "docs": "Push OTLP log entries"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

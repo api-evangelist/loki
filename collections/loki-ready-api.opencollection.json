@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loki HTTP Config Ready API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ready",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Readiness probe",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:3100/ready"
+          },
+          "docs": "Readiness probe"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
