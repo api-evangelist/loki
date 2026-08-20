@@ -20,6 +20,11 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/loki.png
 tags:
   - Logging
   - Observability
+  - Open-Source
+  - Grafana
+tags_raw:
+  - Logging
+  - Observability
   - Open Source
   - Grafana
 url: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/apis.yml
@@ -71,6 +76,8 @@ apis:
   description: The Otlp API from Loki — 1 operation(s) for otlp.
   humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
   tags:
+  - OTLP
+  tags_raw:
   - Otlp
   properties:
   - type: OpenAPI
