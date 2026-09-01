@@ -89,7 +89,7 @@ apis:
   description: The Otlp API from Loki — 1 operation(s) for otlp.
   humanURL: https://grafana.com/docs/loki/latest/reference/loki-http-api/
   tags:
-  - Otlp
+  - OTLP
   tags_raw:
   - Otlp
   properties:
