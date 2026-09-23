@@ -1,11 +1,7 @@
 {
   "provider": "loki",
   "sources": [
-    "loki-config-api-openapi.yml",
-    "loki-loki-api-openapi.yml",
-    "loki-metrics-api-openapi.yml",
-    "loki-otlp-api-openapi.yml",
-    "loki-ready-api-openapi.yml"
+    "_ae-authored/loki-openapi.yml"
   ],
   "outputs": [
     "loki-config-api-openapi.yml",
@@ -17,6 +13,48 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "loki-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "loki-openapi.yml: tagged paths POST /loki/api/v1/push -> Loki",
+    "loki-openapi.yml: tagged paths POST /otlp/v1/logs -> Otlp",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/query -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/query_range -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/labels -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/label/{name}/values -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/series -> Loki",
+    "loki-openapi.yml: tagged paths POST /loki/api/v1/series -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/index/stats -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/index/volume -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/index/volume_range -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/patterns -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/tail -> Loki",
+    "loki-openapi.yml: tagged paths GET /ready -> Ready",
+    "loki-openapi.yml: tagged paths GET /metrics -> Metrics",
+    "loki-openapi.yml: tagged paths GET /config -> Config",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/status/buildinfo -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/rules -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/rules/{namespace} -> Loki",
+    "loki-openapi.yml: tagged paths POST /loki/api/v1/rules/{namespace} -> Loki",
+    "loki-openapi.yml: tagged paths DELETE /loki/api/v1/rules/{namespace} -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/rules/{namespace}/{groupName} -> Loki",
+    "loki-openapi.yml: tagged paths DELETE /loki/api/v1/rules/{namespace}/{groupName} -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/delete -> Loki",
+    "loki-openapi.yml: tagged paths POST /loki/api/v1/delete -> Loki",
+    "loki-openapi.yml: tagged paths DELETE /loki/api/v1/delete -> Loki",
+    "loki-openapi.yml: tagged paths GET /loki/api/v1/format_query -> Loki",
+    "loki-openapi.yml: declared missing tag: Config",
+    "loki-openapi.yml: declared missing tag: Loki",
+    "loki-openapi.yml: declared missing tag: Metrics",
+    "loki-openapi.yml: declared missing tag: Otlp",
+    "loki-openapi.yml: declared missing tag: Ready",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "loki-config-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loki-loki-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loki-metrics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loki-otlp-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loki-ready-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
