@@ -113,6 +113,9 @@ apis:
   - type: GitHubRepository
     url: https://github.com/grafana/loki
 common:
+- type: CapabilityMap
+  url: capabilities/loki-capability-edges.yml
+  name: Loki Business Capability Map
 - type: IssueTracker
   url: https://github.com/grafana/loki/issues
 - type: Releases
