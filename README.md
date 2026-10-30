@@ -1,4 +1,4 @@
-# Loki (loki)
+# Loki
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,54 +66,124 @@
 
 Loki is an open source log aggregation system from Grafana Labs designed to store and query logs efficiently using labels instead of full-text indexing.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/apis.yml)
+**Areas:** Logging · Observability · Open Source · Grafana
 
-## Scope
+## Loki on APIs.io
 
-- **Type:** Index
+Everything profiled for Loki is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/loki/](https://apis.io/providers/loki/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Logging
-- Observability
-- Open Source
-- Grafana
+- [Loki Config API](https://apis.io/apis/loki/loki-config-api/) — The Config API from Loki — 1 operation(s) for config.
+- [Loki API](https://apis.io/apis/loki/loki-loki-api/) — The Loki API from Loki — 17 operation(s) for loki.
+- [Loki Metrics API](https://apis.io/apis/loki/loki-metrics-api/) — The Metrics API from Loki — 1 operation(s) for metrics.
+- [Loki Otlp API](https://apis.io/apis/loki/loki-otlp-api/) — The Otlp API from Loki — 1 operation(s) for otlp.
+- [Loki Ready API](https://apis.io/apis/loki/loki-ready-api/) — The Ready API from Loki — 1 operation(s) for ready.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-25
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Loki HTTP API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Loki HTTP API supports pushing logs, querying with LogQL, range queries, label discovery, series retrieval, index stats and volume, pattern detection, log tailing, deletion, and ruler operations. There is no published OpenAPI specification; see Grafana's HTTP API reference for endpoint details.
+- [Loki Agentic Access](https://apis.io/agentic-access/loki/loki-agentic-access/)
 
-- **Human URL:** [https://grafana.com/docs/loki/latest/reference/loki-http-api/](https://grafana.com/docs/loki/latest/reference/loki-http-api/)
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Logging
-- Observability
-- HTTP API
+- [Loki HTTP API](https://apis.io/collections/loki/open-loki/)
+- [Loki HTTP Config API](https://apis.io/collections/loki/open-loki-config-api/)
+- [HTTP Config Loki API](https://apis.io/collections/loki/open-loki-loki-api/)
+- [Loki HTTP Config Metrics API](https://apis.io/collections/loki/open-loki-metrics-api/)
+- [Loki HTTP Config Otlp API](https://apis.io/collections/loki/open-loki-otlp-api/)
+- [Loki HTTP Config Ready API](https://apis.io/collections/loki/open-loki-ready-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://grafana.com/docs/loki/latest/reference/loki-http-api/)
-- [GitHub Repository](https://github.com/grafana/loki)
-- [OpenAPI](openapi/loki-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/loki.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/loki.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Loki Domain Security](https://apis.io/security/loki/loki-domain-security/)
+- [Loki Trust Center](https://apis.io/security/loki/loki-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Loki Plans Pricing](https://apis.io/plans/loki/loki-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Loki Rate Limits](https://apis.io/rate-limits/loki/loki-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Loki Finops](https://apis.io/finops/loki/loki-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://grafana.com/oss/loki/)
 - [Documentation](https://grafana.com/docs/loki/latest/)
-- [GitHub Organization](https://github.com/grafana)
-- [Integrations](https://grafana.com/integrations/)
+- [Blog](https://grafana.com/blog/index.xml)
+- [GitHub](https://github.com/grafana)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 44.6 |
+| Contract quality | 33.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/loki/](https://apis.io/providers/loki/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Loki: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/loki/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
